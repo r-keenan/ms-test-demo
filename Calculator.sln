@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.App", "Calculato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Library", "Calculator.Library\Calculator.Library.csproj", "{65A75E83-CA83-48B6-A2C8-10160E2676AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Test", "Calculator.Test\Calculator.Test.csproj", "{EBB812E2-7678-4A34-9CC2-215C7B23CCE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Library.Test", "Calculator.Library.Test\Calculator.Library.Test.csproj", "{EBB812E2-7678-4A34-9CC2-215C7B23CCE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
