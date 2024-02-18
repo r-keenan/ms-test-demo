@@ -28,6 +28,7 @@ public class CalculatorTests
         // Act
         int actual = Calculator.Divide(numerator, denominator);
         
+        System.Diagnostics.Debug.WriteLine($"Debug: {actual.ToString()}");
         TestContext.WriteLine(actual.ToString());
         
         // Assert
