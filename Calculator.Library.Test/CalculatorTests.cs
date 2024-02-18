@@ -3,6 +3,20 @@ namespace Calculator.Library.Test;
 [TestClass]
 public class CalculatorTests
 {
+    private TestContext _testContext;
+
+    public TestContext TestContext
+    {
+        get
+        {
+            return _testContext;
+        }
+        set
+        {
+            _testContext = value;
+        }
+    }
+    
     [TestMethod]
     public void Divide_PositiveNumbers_Test()
     {
@@ -13,6 +27,8 @@ public class CalculatorTests
         
         // Act
         int actual = Calculator.Divide(numerator, denominator);
+        
+        TestContext.WriteLine(actual.ToString());
         
         // Assert
         Assert.AreEqual(expected, actual);
