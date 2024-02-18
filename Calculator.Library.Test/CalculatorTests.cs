@@ -84,4 +84,12 @@ public class CalculatorTests
             throw;
         }
     }
+    
+    // Testing a private method
+    //[TestMethod]
+    //public void IsPositive_PositiveNumber_ReturnsTrue_Test()
+    //{
+    //    // PrivateType not available in .Net Core
+    //    //var p = new PrivateType(typeof(Calculator));
+    //}
 }

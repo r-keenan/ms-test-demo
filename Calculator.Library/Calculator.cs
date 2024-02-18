@@ -19,7 +19,17 @@ public class Calculator
     // It can be used on more than just methods.
     public static int Add(int firstNumber, int secondNumber)
     {
-        int result = firstNumber + secondNumber;
-        return result;
+        if (IsPositive(firstNumber) && IsPositive(secondNumber))
+        {
+            int result = firstNumber + secondNumber;
+            return result;
+        }
+
+        throw new ArgumentException("Only Positive numbers are allowed!");
+    }
+
+    private static bool IsPositive(int Number)
+    {
+        return Number > 0;
     }
 }
