@@ -64,4 +64,24 @@ public class CalculatorTests
         // Assert
         Assert.AreEqual(expected, actual);
     }
+
+    [TestMethod]
+    [ExpectedException(typeof(DivideByZeroException))]
+    public void Divide_DenominatorIsZero_ThrowDivideByZeroException_Test()
+    {
+        // Arrange
+        int numerator = 20;
+        int denominator = 0;
+
+        // Act
+        try
+        {
+            Calculator.Divide(numerator, denominator);
+        }
+        catch (DivideByZeroException ex)
+        {
+            Assert.AreEqual("Denominator cannot be zero!", ex.Message);
+            throw;
+        }
+    }
 }
