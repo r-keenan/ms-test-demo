@@ -23,6 +23,8 @@ public class RectangleTest
     }
     
     [TestMethod]
+    // Used to timeout after duration that is passed as param. Throws exception if unit test takes longer than param.
+    [Timeout((2000))]
     public void PerimeterTest()
     {
 
@@ -34,6 +36,8 @@ public class RectangleTest
     }
 
     [TestMethod]
+    // This says that the test should not be run.
+    //[Ignore]
     public void AreaTest()
     {
 
