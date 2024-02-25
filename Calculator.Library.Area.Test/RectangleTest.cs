@@ -4,12 +4,27 @@ namespace Calculator.Library.Area.Test;
 [TestClass]
 public class RectangleTest
 {
+    Rectangle rectangle;
+    
+    // This is ran prior to every unit test.
+    [TestInitialize]
+    public void Setup()
+    {
+        rectangle = new Rectangle();
+        rectangle.Width = 3;
+        rectangle.Length = 4;
+    }
+    
+    // THis is ran after every unit test
+    [TestCleanup]
+    public void Cleanup()
+    {
+        rectangle = null;
+    }
+    
     [TestMethod]
     public void PerimeterTest()
     {
-        Rectangle rectangle = new Rectangle();
-        rectangle.Width = 3;
-        rectangle.Length = 4;
 
         double expected = 14;
 
@@ -21,9 +36,6 @@ public class RectangleTest
     [TestMethod]
     public void AreaTest()
     {
-        Rectangle rectangle = new Rectangle();
-        rectangle.Width = 3;
-        rectangle.Length = 4;
 
         double expected = 12;
 
@@ -31,4 +43,6 @@ public class RectangleTest
         
         Assert.AreEqual(expected, actual);
     }
+    
+    
 }
